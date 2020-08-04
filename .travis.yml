@@ -19,9 +19,9 @@ after_success:
 #docker hub login with CLI
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin docker.io
 #push images to docker hub
-    - docker push sandeepsbais/multi-react-client
-    - docker push sandeepsbais/multi-server
-    - docker push sandeepsbais/multi-nginx
-    - docker push sandeepsbais/multi-worker
+    - docker push sandeepsbais/multi-react-client:latest
+    - docker push sandeepsbais/multi-server:latest
+    - docker push sandeepsbais/multi-nginx:latest
+    - docker push sandeepsbais/multi-worker:latest
 
 
