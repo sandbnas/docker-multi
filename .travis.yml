@@ -24,4 +24,16 @@ after_success:
     - docker push sandeepsbais/multi-nginx
     - docker push sandeepsbais/multi-worker
 
+deploy:
+    edge: true
+    provider: elasticbeanstalk
+    region: "eu-central-1"
+    app: "multi-docker"
+    env: "MultiDocker-env"
+    bucket_name: "elasticbeanstalk-eu-central-1-376383335620"
+    bucket_path: "multi-docker"
+    access_key_id: $AWS_KEYID
+    secret_access_key: $AWS_SECKEY
+on:
+    branch: master
 
